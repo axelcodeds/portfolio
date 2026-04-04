@@ -1,0 +1,9 @@
+export { HeaderComponent } from './header/header.component';
+export { HeroComponent } from './hero/hero.component';
+export { LanguageToggleComponent } from './language-toggle/language-toggle.component';
+export { ProjectCardComponent } from './project-card/project-card.component';
+export { ProjectDetailComponent } from './project-detail/project-detail.component';
+export { ProjectsGridComponent } from './projects-grid/projects-grid.component';
+export { ScrollIndicatorComponent } from './scroll-indicator/scroll-indicator.component';
+export { SkillsSectionComponent } from './skills-section/skills-section.component';
+export { FooterComponent } from './footer/footer.component';
