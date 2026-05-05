@@ -1,0 +1,52 @@
+services:
+  # Reverse proxy - optional for production load balancing
+  proxy:
+    image: nginx:1.27-alpine
+    container_name: portfolio-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx-proxy.conf:/etc/nginx/nginx.conf:ro
+      # Uncomment for SSL support
+      # - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - portfolio
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Portfolio application
+  portfolio:
+    image: portfolio:latest
+    container_name: portfolio-app
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      - TZ=UTC
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    labels:
+      - "com.portfolio.description=Portfolio Angular App"
+      - "com.portfolio.version=1.0.0"
