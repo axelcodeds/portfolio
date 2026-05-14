@@ -51,28 +51,13 @@ interface NavItem {
                 </li>
               }
               <li>
-                <a
-                  href="/resume.pdf"
-                  download
+                <a     
+                  href="https://docs.google.com/document/d/e/2PACX-1vQXhkJoB9Cg11nlHKsd4zvxPWBVNLRHGV3ZN7RtCPpyfLIgGMdQ9rwD0Sx5tbPozEyWqUa93DKUEqFg/pub" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-2 bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-500 transition-colors"
                 >
                   {{ t().nav.resume }}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7,10 12,15 17,10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
                 </a>
               </li>
             </ul>
@@ -152,8 +137,9 @@ interface NavItem {
               }
               <li>
                 <a
-                  href="/resume.pdf"
-                  download
+                  href="https://docs.google.com/document/d/e/2PACX-1vQXhkJoB9Cg11nlHKsd4zvxPWBVNLRHGV3ZN7RtCPpyfLIgGMdQ9rwD0Sx5tbPozEyWqUa93DKUEqFg/pub"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-2 bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-500 transition-colors"
                 >
                   {{ t().nav.resume }}
