@@ -52,7 +52,7 @@ interface NavItem {
               }
               <li>
                 <a
-                  href="/resume.pdf"
+                  href="https://docs.google.com/document/d/e/2PACX-1vQXhkJoB9Cg11nlHKsd4zvxPWBVNLRHGV3ZN7RtCPpyfLIgGMdQ9rwD0Sx5tbPozEyWqUa93DKUEqFg/pub"
                   download
                   class="inline-flex items-center gap-2 bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-500 transition-colors"
                 >
